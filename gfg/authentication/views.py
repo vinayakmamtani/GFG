@@ -76,7 +76,7 @@ def signup(request):
         
         
         subject = "Welcome to Bits&Bytes"
-        message = "Hello " + myuser.Name + "Welcome to Bits&Bytes Login Page. We are glad to have you here. Hope you have a great time here.\n We are sending you and authentication email to verify your account \n"
+        message = "Hello " + myuser.Name + "Welcome to Bits&Bytes Login Page. We are glad to have you here. Hope you have a great time here.\n We are sending you a confirmation email to verify your account \n"
         from_email = settings.EMAIL_HOST_USER
         to_list = [myuser.email]
         send_mail(subject,message,from_email,to_list,fail_silently=True)
